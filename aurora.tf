@@ -1,6 +1,8 @@
 resource "aws_rds_cluster" "kong" {
   count = var.enable_aurora && var.db_instance_count > 0 ? 1 : 0
 
+
+
   cluster_identifier = format("%s-%s", var.service, var.environment)
   engine             = "aurora-postgresql"
   engine_version     = var.db_engine_version
