@@ -37,6 +37,7 @@ resource "aws_rds_cluster_instance" "kong" {
   engine_version     = var.db_engine_version
   instance_class     = var.db_instance_class
 
+
   db_subnet_group_name    = var.db_subnets
   db_parameter_group_name = format("%s-%s", var.service, var.environment)
 
