@@ -66,6 +66,9 @@ resource "aws_rds_cluster_parameter_group" "kong" {
       "Service"     = var.service,
     },
     var.tags
+
   )
 }
+
+
 
